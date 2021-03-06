@@ -4,7 +4,9 @@ uses
   Vcl.Forms,
   unit_principal in 'unit_principal.pas' {form_menu},
   unit_dados in 'unit_dados.pas' {module_img: TDataModule},
-  unit_cadastro in 'unit_cadastro.pas' {form_cadastro};
+  unit_cadastro in 'unit_cadastro.pas' {form_cadastro},
+  classe_Pessoa in 'classe_Pessoa.pas',
+  pessoa_Service in 'pessoa_Service.pas';
 
 {$R *.res}
 

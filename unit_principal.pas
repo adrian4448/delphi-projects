@@ -35,7 +35,9 @@ procedure Tform_menu.op_pessoasClick(Sender: TObject);
 begin
     if form_cadastro = nil then
       form_cadastro := Tform_cadastro.Create(self);
-    form_cadastro.Visible := true;
+
+    form_cadastro.ShowModal;
+    FreeAndNil(form_cadastro);
 end;
 
 end.

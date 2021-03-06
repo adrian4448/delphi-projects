@@ -1,6 +1,7 @@
 object form_cadastro: Tform_cadastro
   Left = 0
   Top = 0
+  Align = alRight
   Caption = 'form_cadastro'
   ClientHeight = 176
   ClientWidth = 516

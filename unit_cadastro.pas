@@ -27,7 +27,6 @@ type
 
 var
   form_cadastro: Tform_cadastro;
-
 implementation
 
 {$R *.dfm}
