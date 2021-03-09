@@ -1,0 +1,30 @@
+unit pessoa_Service;
+
+interface
+uses
+    System.Classes, classe_Pessoa, generics.Collections;
+
+  type TPessoaService = class
+    private
+      lista: TList<TPessoa>;
+    public
+      constructor create;
+      procedure addPessoa(pessoa:TPessoa);
+  end;
+
+implementation
+
+
+{ TPessoaService }
+
+procedure TPessoaService.addPessoa(pessoa: TPessoa);
+begin
+  self.lista.Add(pessoa);
+end;
+
+constructor TPessoaService.create;
+begin
+  self.lista := TList<TPessoa>.create();
+end;
+
+end.
