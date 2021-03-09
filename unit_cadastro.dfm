@@ -3,7 +3,7 @@ object form_cadastro: Tform_cadastro
   Top = 0
   Align = alRight
   Caption = 'form_cadastro'
-  ClientHeight = 176
+  ClientHeight = 166
   ClientWidth = 516
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -16,14 +16,11 @@ object form_cadastro: Tform_cadastro
   TextHeight = 13
   object pnl_buttons: TPanel
     Left = 0
-    Top = 135
+    Top = 125
     Width = 516
     Height = 41
     Align = alBottom
     TabOrder = 0
-    ExplicitLeft = 200
-    ExplicitTop = 112
-    ExplicitWidth = 185
     object BitBtn1: TBitBtn
       Left = 119
       Top = 6
@@ -45,6 +42,7 @@ object form_cadastro: Tform_cadastro
         93337FFFF7737777733300000033333333337777773333333333}
       NumGlyphs = 2
       TabOrder = 0
+      OnClick = BitBtn1Click
     end
     object BitBtn2: TBitBtn
       Left = 231
@@ -97,12 +95,8 @@ object form_cadastro: Tform_cadastro
     Left = 0
     Top = 0
     Width = 516
-    Height = 135
-    Align = alClient
+    Height = 125
     TabOrder = 1
-    ExplicitTop = -6
-    ExplicitWidth = 635
-    ExplicitHeight = 258
     object lblIdade: TLabel
       Left = 89
       Top = 32

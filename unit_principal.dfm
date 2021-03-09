@@ -12,6 +12,8 @@ object form_menu: Tform_menu
   Font.Style = []
   Menu = MainMenu1
   OldCreateOrder = False
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
   PixelsPerInch = 96
   TextHeight = 13
   object MainMenu1: TMainMenu
@@ -28,18 +30,12 @@ object form_menu: Tform_menu
     end
     object men_consulta: TMenuItem
       Caption = 'Consul&ta'
-      object op_qt_grau: TMenuItem
-        Caption = 'Quantidade de pessoas por grau'
-        ImageIndex = 1
+      object op_resultado: TMenuItem
+        Caption = 'Resultados'
+        OnClick = op_resultadoClick
       end
-      object op_perc_grau: TMenuItem
-        Caption = 'Percentual de pessoas por grau'
-        ImageIndex = 2
-      end
-      object graudeescolaridademaiormenor1: TMenuItem
-        Caption = 'Grau de escolaridade maior/menor'
-        ImageIndex = 3
-      end
+    end
+    object TMenuItem
     end
   end
 end
