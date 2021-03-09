@@ -6,7 +6,8 @@ uses
   unit_dados in 'unit_dados.pas' {module_img: TDataModule},
   unit_cadastro in 'unit_cadastro.pas' {form_cadastro},
   classe_Pessoa in 'classe_Pessoa.pas',
-  pessoa_Service in 'pessoa_Service.pas';
+  pessoa_Service in 'pessoa_Service.pas',
+  unit_resultado in 'unit_resultado.pas' {form_resultado};
 
 {$R *.res}
 
