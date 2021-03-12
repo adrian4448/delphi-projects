@@ -35,7 +35,5 @@ object form_menu: Tform_menu
         OnClick = op_resultadoClick
       end
     end
-    object TMenuItem
-    end
   end
 end

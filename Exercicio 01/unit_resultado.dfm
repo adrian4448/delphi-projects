@@ -21,10 +21,6 @@ object form_resultado: Tform_resultado
     Height = 510
     Align = alClient
     TabOrder = 0
-    ExplicitLeft = 88
-    ExplicitTop = 40
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object memo_result: TMemo
       Left = 0
       Top = 0
@@ -42,9 +38,6 @@ object form_resultado: Tform_resultado
     Height = 41
     Align = alBottom
     TabOrder = 1
-    ExplicitLeft = 120
-    ExplicitTop = 144
-    ExplicitWidth = 185
     object BitBtn3: TBitBtn
       Left = 631
       Top = 6

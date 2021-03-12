@@ -61,6 +61,13 @@ begin
   memo_result.Lines.Add('Grau com maior quantidade de pessoas é o: ' + form_menu.ServicoPessoa.getStringGrau(form_menu.ServicoPessoa.grauMaiorQtde));
   memo_result.Lines.Add('Grau com menor quantidade de pessoas é o: ' + form_menu.ServicoPessoa.getStringGrau(form_menu.ServicoPessoa.grauMenorQtde));
 
+  memo_result.Lines.Add(format('O percentual de pessoas que concluíram o ensino superior antes dos 24 anos de idade é: %f', [form_menu.ServicoPessoa.graduadoPercent]));
+  memo_result.Lines.Add('');
+
+  memo_result.Lines.Add(format('A média de idade das pessoas que concluíram o mestrado é: %f', [form_menu.ServicoPessoa.mediaIdadeMestrad]));
+  memo_result.Lines.Add('');
+
+  memo_result.Lines.Add('A menor idade com doutorado concluído é: ' + IntToStr(form_menu.ServicoPessoa.menorIdadeDoutorado));
 end;
 
 end.

@@ -2,7 +2,7 @@ unit pessoa_Service;
 
 interface
 uses
-    System.Classes, classe_Pessoa, generics.Collections;
+    System.Classes, classe_Pessoa, generics.Collections, System.Math;
 
   type TPessoaService = class
     private
@@ -17,12 +17,12 @@ uses
       function    getPercentGrau(grau:integer) : real;
       function    grauMaiorQtde : integer;
       function    grauMenorQtde : integer;
+      function    graduadoPercent : real;
+      function    mediaIdadeMestrad : real;
+      function    menorIdadeDoutorado : integer;
   end;
 
 implementation
-
-
-{ TPessoaService }
 
 procedure TPessoaService.addPessoa(pessoa: TPessoa);
 begin
@@ -79,6 +79,21 @@ begin
   result := self.lista.Count;
 end;
 
+function TPessoaService.graduadoPercent: real;
+var 
+  p:TPessoa;
+begin
+  result := 0;
+  for p in self.lista do
+    begin
+      if((p.getIdade() <= 24) and (p.getGrau() >= 3)) then
+        begin
+          result := result + 1;
+        end
+    end;
+  result := (result / self.getTotalLista) * 100; 
+end;
+
 function TPessoaService.grauMaiorQtde: integer;
 var
   i,qtde:integer;
@@ -96,17 +111,49 @@ end;
 
 function TPessoaService.grauMenorQtde: integer;
 var
-  i,qtde:integer;
+  i,menorIdade:integer;
 begin
-   qtde := 999;
+   menorIdade := 999;
    for i := 1 to 6 do
      begin   
-       if(self.getQtdeGrau(i) < qtde) then
+       if(self.getQtdeGrau(i) < menorIdade) then
         begin
-          qtde := self.getQtdeGrau(i);
+          menorIdade := self.getQtdeGrau(i);
           result := i;
         end;
-     end;  
+     end;
+end;
+
+function TPessoaService.mediaIdadeMestrad: real;
+var
+  p:TPessoa;
+  totalIdades:integer;
+begin
+  result := 0;
+  for p in self.lista do
+    begin
+      if(p.getGrau = 5) then
+        begin
+          totalIdades := totalIdades + p.getIdade();
+          result := result + 1;
+        end;      
+    end;
+  result := totalIdades / result;  
+end;
+
+function TPessoaService.menorIdadeDoutorado: integer;  
+var
+  p:TPessoa;
+begin
+   result := 999;
+   for p in self.lista do
+    begin 
+      if((p.getGrau = 6) and (p.getIdade() < result)) then
+        begin  
+          result := p.getIdade();  
+        end;
+    end;
+    result := ifThen(result = 999, 0, result);
 end;
 
 end.
