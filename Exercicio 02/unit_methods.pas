@@ -6,6 +6,7 @@ interface
     private
     public
       function calcularH : real;
+      function somaDezPrimeiros : real;
   end;
 
 implementation
@@ -48,5 +49,10 @@ begin
 end;
 
 
+
+function TMethods.somaDezPrimeiros: real;
+begin
+
+end;
 
 end.
