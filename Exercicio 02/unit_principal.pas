@@ -27,7 +27,11 @@ implementation
 procedure Tform_principal.FormActivate(Sender: TObject);
 begin
   nm_resultados.Lines.Add(format('O Valor de H é: %f',[metodos.calcularH()]));
-
+  nm_resultados.Lines.Add(format('O valor da soma dos dez primeiros números é: %f', [metodos.somaDezPrimeiros()]));
+  nm_resultados.Lines.Add(format('O valor de S é: %f',[metodos.calcularS]));
+  nm_resultados.Lines.Add(format('Os números pares do intervalo de 0 a 100 são: %s', [metodos.numPares]));
+  nm_resultados.Lines.Add(format('Os números impares do intervalo de 0 a 100 são: %s', [metodos.numImpares]));
+  nm_resultados.Lines.Add(format('Os números primos do intervalo de 0 a 100 são: %s', [metodos.numPrimos]));
 end;
 
 end.

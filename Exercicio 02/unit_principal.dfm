@@ -21,10 +21,6 @@ object form_principal: Tform_principal
     Height = 281
     Align = alClient
     TabOrder = 0
-    ExplicitLeft = 24
-    ExplicitTop = 32
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object nm_resultados: TMemo
       Left = 1
       Top = 1
@@ -33,10 +29,6 @@ object form_principal: Tform_principal
       Align = alClient
       ReadOnly = True
       TabOrder = 0
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 185
-      ExplicitHeight = 89
     end
   end
 end
