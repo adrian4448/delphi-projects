@@ -20,8 +20,6 @@ object form_cadastro: Tform_cadastro
     Height = 59
     Align = alBottom
     TabOrder = 0
-    ExplicitTop = 240
-    ExplicitWidth = 852
     object btn_cadastrar: TBitBtn
       Left = 437
       Top = 16
@@ -57,10 +55,6 @@ object form_cadastro: Tform_cadastro
     Height = 165
     Align = alClient
     TabOrder = 1
-    ExplicitLeft = 344
-    ExplicitTop = 88
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object lblI_dade: TLabel
       Left = 352
       Top = 80

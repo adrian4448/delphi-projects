@@ -50,6 +50,7 @@ begin
       habitante.setSexo(group_sexo.ItemIndex);
       habitante.setCorOlhos(group_cor_olho.ItemIndex);
       habitante.setCorCabelos(group_cor_cabelo.ItemIndex);
+      habitante.setIdade(StrToInt(txt_idade.Text));
       form_principal.habitante_service.addHabitante(habitante);
       btn_limpar.Click;
     end;

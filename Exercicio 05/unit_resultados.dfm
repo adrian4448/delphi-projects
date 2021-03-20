@@ -1,9 +1,9 @@
-object form_results: Tform_results
+object form_resultado: Tform_resultado
   Left = 0
   Top = 0
   Caption = 'Resultados'
-  ClientHeight = 299
-  ClientWidth = 852
+  ClientHeight = 281
+  ClientWidth = 418
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,13 +14,13 @@ object form_results: Tform_results
   OnActivate = FormActivate
   PixelsPerInch = 96
   TextHeight = 13
-  object nm_resultados: TMemo
+  object nm_resultado: TMemo
     Left = 0
     Top = 0
-    Width = 857
-    Height = 297
+    Width = 417
+    Height = 281
     Lines.Strings = (
-      'nm_resultados')
+      'nm_resultado')
     ReadOnly = True
     TabOrder = 0
   end
