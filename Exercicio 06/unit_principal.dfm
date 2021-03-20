@@ -22,8 +22,6 @@ object form_principal: Tform_principal
     Height = 49
     Align = alBottom
     TabOrder = 0
-    ExplicitTop = 317
-    ExplicitWidth = 391
     object btn_cadastrar: TBitBtn
       Left = 8
       Top = 16
@@ -49,8 +47,6 @@ object form_principal: Tform_principal
     Height = 560
     Align = alClient
     TabOrder = 1
-    ExplicitWidth = 391
-    ExplicitHeight = 317
     object lbl_Codigo: TLabel
       Left = 8
       Top = 16
