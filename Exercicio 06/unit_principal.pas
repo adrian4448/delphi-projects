@@ -59,7 +59,6 @@ begin
       nm_resultados.Lines.Add(format('O funcionario do código: %d  tinha o sálario: %f e com aumento possui o sálario de %f', [f.getCodigo, f.getSalarioAntigo, f.getSalarioAtual]));
       lbl_salarioAntigo.Caption := Format('%f', [StrToFloat(lbl_salarioAntigo.Caption) + f.getSalarioAntigo]);
       lbl_salarioNovo.Caption := Format('%f', [StrToFloat(lbl_salarioNovo.Caption) + f.getSalarioAtual]);
-      FreeAndNil(f);
     end;
 end;
 

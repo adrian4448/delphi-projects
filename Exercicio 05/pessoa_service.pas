@@ -62,6 +62,7 @@ var
   totalIdade : integer;
 begin
   result := 0;
+  totalIdade := 0;
   for pessoa in self.lista do
     begin
       if(pessoa.getSatisfacao = 3) then
@@ -70,7 +71,7 @@ begin
           totalIdade := totalIdade + pessoa.getIdade;
         end;
     end;
-  result := result / totalIdade;
+  result := totalIdade / result;
 end;
 
 function TPessoa_Service.porcentagemPessimo: real;
@@ -85,7 +86,7 @@ begin
           result := result + 1;
         end;
     end;
-  result := result / self.lista.Count;
+  result := (result * 100) / self.lista.Count;
 end;
 
 function TPessoa_Service.quantidadeOtimo: integer;
