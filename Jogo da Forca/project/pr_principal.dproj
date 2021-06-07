@@ -112,6 +112,10 @@
             <Form>frm_jogo</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="..\views\game\unit_regra.pas">
+            <Form>form_Regras</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

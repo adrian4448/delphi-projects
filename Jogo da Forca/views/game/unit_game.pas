@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Imaging.pngimage,
-  Vcl.StdCtrls, Vcl.Mask, Vcl.Imaging.jpeg, Vcl.Buttons,obj_utils;
+  Vcl.StdCtrls, Vcl.Mask, Vcl.Imaging.jpeg, Vcl.Buttons,obj_utils, generics.collections;
 
 type
   Tfrm_jogo = class(TForm)
@@ -99,12 +99,13 @@ procedure Tfrm_jogo.Image1Click(Sender: TObject);
   palavra: String;
   palavraJogo: String;
 begin
-  palavra := lbl_palavra.Caption;
+    palavra := lbl_palavra.Caption;
   if(palavra.ToUpper.contains(txt_letra.Text)) then
     begin
     utils := Tutils.Create;
     palavraJogo := txt_letra.Text;
     txt_palavra.Text := utils.TextoJogoSubstituido(lbl_palavra.Caption, txt_palavra.Text, palavraJogo.chars[0]);
+    txt_letra.Text := '';
     FreeAndNil(utils);
     if(txt_palavra.Text = lbl_palavra.Caption) then
       begin
@@ -115,8 +116,9 @@ begin
   else
     begin
       self.errou;
+      txt_letra.Text := '';
     end;
-end;
+  end;
 
 procedure Tfrm_jogo.lbl_dicaMouseEnter(Sender: TObject);
 begin
@@ -129,5 +131,6 @@ begin
   lbl_dica.Color := clBlack;
   lbl_dicaPalavra.Visible := false;
 end;
+
 
 end.

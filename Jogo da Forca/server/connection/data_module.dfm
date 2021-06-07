@@ -10,7 +10,6 @@ object DataModule1: TDataModule1
       'User_Name=root'
       'Password=JMV@xrms9'
       'DriverID=MySQL')
-    Connected = True
     Left = 72
     Top = 56
   end

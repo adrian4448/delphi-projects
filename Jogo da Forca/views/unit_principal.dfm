@@ -1797,11 +1797,11 @@ object frm_main: Tfrm_main
     Font.Name = 'Ink Free'
     Font.Style = []
     ParentFont = False
-    OnClick = lbl_iniciarClick
+    OnClick = lbl_regrasClick
   end
   object lbl_sair: TLabel
     Left = 663
-    Top = 435
+    Top = 438
     Width = 56
     Height = 41
     Caption = 'Sair'

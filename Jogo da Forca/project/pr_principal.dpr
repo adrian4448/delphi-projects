@@ -7,7 +7,8 @@ uses
   data_module in '..\server\connection\data_module.pas' {DataModule1: TDataModule},
   unit_principal in '..\views\unit_principal.pas' {frm_main},
   unit_dificuldade in '..\views\game\unit_dificuldade.pas' {frm_dificuldade},
-  unit_game in '..\views\game\unit_game.pas' {frm_jogo};
+  unit_game in '..\views\game\unit_game.pas' {frm_jogo},
+  unit_regra in '..\views\game\unit_regra.pas' {form_Regras};
 
 {$R *.res}
 
@@ -18,5 +19,6 @@ begin
   Application.CreateForm(Tfrm_main, frm_main);
   Application.CreateForm(Tfrm_dificuldade, frm_dificuldade);
   Application.CreateForm(Tfrm_jogo, frm_jogo);
+  Application.CreateForm(Tform_Regras, form_Regras);
   Application.Run;
 end.

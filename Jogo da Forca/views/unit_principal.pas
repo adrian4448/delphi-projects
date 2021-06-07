@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, obj_palavra,
-  obj_utils, Vcl.Imaging.jpeg;
+  obj_utils, Vcl.Imaging.jpeg, unit_regra;
 
 type
   Tfrm_main = class(TForm)
@@ -19,6 +19,7 @@ type
     procedure lbl_iniciarClick(Sender: TObject);
     procedure lbl_sairClick(Sender: TObject);
     procedure Label2Click(Sender: TObject);
+    procedure lbl_regrasClick(Sender: TObject);
   private
     palavra: TPalavra;
     utils : TUtils;
@@ -79,6 +80,16 @@ begin
       showMessage('Selecione uma dificuldade antes');
     end;
 
+end;
+
+procedure Tfrm_main.lbl_regrasClick(Sender: TObject);
+begin
+     if(form_Regras = nil) then
+    begin
+      form_Regras := Tform_Regras.Create(self);
+    end;
+  form_Regras.ShowModal;
+  FreeAndNil(form_Regras);
 end;
 
 procedure Tfrm_main.lbl_sairClick(Sender: TObject);
