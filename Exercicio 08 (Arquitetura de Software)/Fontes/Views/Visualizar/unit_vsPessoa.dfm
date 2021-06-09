@@ -1,0 +1,40 @@
+object frm_vsPessoa: Tfrm_vsPessoa
+  Left = 0
+  Top = 0
+  Caption = 'frm_vsPessoa'
+  ClientHeight = 447
+  ClientWidth = 771
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 771
+    Height = 447
+    Align = alClient
+    TabOrder = 0
+    ExplicitWidth = 496
+    ExplicitHeight = 351
+    object DBGrid1: TDBGrid
+      Left = 8
+      Top = 16
+      Width = 753
+      Height = 431
+      DataSource = data_connection.data_vsPessoaCon
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
+    end
+  end
+end
