@@ -94,6 +94,16 @@
             <Form>frm_Login</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="..\server\objetos\obj_Cliente.pas"/>
+        <DCCReference Include="..\server\objetos\obj_Barbeiro.pas"/>
+        <DCCReference Include="..\server\objetos\obj_Usuario.pas"/>
+        <DCCReference Include="..\server\objetos\obj_Servico.pas"/>
+        <DCCReference Include="..\server\objetos\obj_Agendamento.pas"/>
+        <DCCReference Include="..\server\connection\data_module.pas">
+            <Form>DM_BarberShop</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

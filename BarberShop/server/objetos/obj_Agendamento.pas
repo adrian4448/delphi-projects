@@ -75,7 +75,7 @@ end;
 
 function TAgendamento.getValor: double;
 begin
-  result := self.barbeiro;
+  result := self.valor;
 end;
 
 procedure TAgendamento.setBarbeiro(barbeiro: TBarbeiro);

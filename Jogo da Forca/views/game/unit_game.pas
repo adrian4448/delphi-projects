@@ -95,9 +95,11 @@ end;
 
 procedure Tfrm_jogo.Image1Click(Sender: TObject);
   var
-  i: Integer;
+  i, j: Integer;
   palavra: String;
   palavraJogo: String;
+  vetor: array[0..20] of string;
+  indice: Integer;
 begin
     palavra := lbl_palavra.Caption;
   if(palavra.ToUpper.contains(txt_letra.Text)) then
