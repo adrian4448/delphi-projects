@@ -11,7 +11,12 @@ type
   Tfrm_Login = class(TForm)
     Image1: TImage;
     Edit1: TEdit;
+    Edit2: TEdit;
     Label1: TLabel;
+    Label2: TLabel;
+    Button1: TButton;
+    Button2: TButton;
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -24,5 +29,10 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure Tfrm_Login.Button2Click(Sender: TObject);
+begin
+  Application.Terminate;
+end;
 
 end.
