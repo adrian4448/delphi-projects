@@ -8,6 +8,7 @@ object DataModule1: TDataModule1
     Params.Strings = (
       'Database=forca_dlp'
       'User_Name=root'
+      'Password=JMV@xrms9'
       'DriverID=MySQL')
     Left = 72
     Top = 56
