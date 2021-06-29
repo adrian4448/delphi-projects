@@ -2,14 +2,13 @@ unit obj_Agendamento;
 
 interface
 
-uses obj_Barbeiro, obj_Cliente, obj_Servico;
+uses  obj_Cliente, obj_Servico;
 
 type TAgendamento = class
   private
     id:Integer;
     cliente: TCliente;
     servico: TServico;
-    barbeiro: TBarbeiro;
     valor: double;
     data: TDateTime;
     hora: String;
@@ -18,7 +17,6 @@ type TAgendamento = class
     procedure setId(id: Integer);
     procedure setCliente(cliente: TCliente);
     procedure setServico(servico: TServico);
-    procedure setBarbeiro(barbeiro: TBarbeiro);
     procedure setValor(valor: double);
     procedure setData(data: TDateTime);
     procedure setHora(hora: String);
@@ -27,7 +25,6 @@ type TAgendamento = class
     function getId : Integer;
     function getCliente: TCliente;
     function getServico: TServico;
-    function getBarbeiro : TBarbeiro;
     function getValor : double;
     function getData : TDateTime;
     function getHora: string;
@@ -37,11 +34,6 @@ end;
 implementation
 
 { TAgendamento }
-
-function TAgendamento.getBarbeiro: TBarbeiro;
-begin
-  result := self.barbeiro;
-end;
 
 function TAgendamento.getCliente: TCliente;
 begin
@@ -76,11 +68,6 @@ end;
 function TAgendamento.getValor: double;
 begin
   result := self.valor;
-end;
-
-procedure TAgendamento.setBarbeiro(barbeiro: TBarbeiro);
-begin
-  self.barbeiro := barbeiro;
 end;
 
 procedure TAgendamento.setCliente(cliente: TCliente);

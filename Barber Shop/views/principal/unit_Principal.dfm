@@ -33,9 +33,25 @@ object frm_principal: Tfrm_principal
     end
     object Cliente1: TMenuItem
       Caption = 'Cliente'
+      object CadastrarCliente1: TMenuItem
+        Caption = 'Cadastrar Cliente'
+        OnClick = CadastrarCliente1Click
+      end
+      object VisualizarClientes1: TMenuItem
+        Caption = 'Visualizar Clientes'
+        OnClick = VisualizarClientes1Click
+      end
     end
     object Servios1: TMenuItem
       Caption = 'Servi'#231'os'
+      object CadastrarServio1: TMenuItem
+        Caption = 'Cadastrar Servi'#231'o'
+        OnClick = CadastrarServio1Click
+      end
+      object VisualizarServios1: TMenuItem
+        Caption = 'Visualizar Servi'#231'os'
+        OnClick = VisualizarServios1Click
+      end
     end
     object Usuario1: TMenuItem
       Caption = 'Usuario'

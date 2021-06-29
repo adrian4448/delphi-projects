@@ -5,7 +5,6 @@ object dm_connection: Tdm_connection
   object tfd_connection: TFDConnection
     Params.Strings = (
       'User_Name=root'
-      'Password=JMV@xrms9'
       'Database=barbershop'
       'DriverID=MySQL')
     Transaction = tfd_transaction

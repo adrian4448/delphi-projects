@@ -100,24 +100,27 @@
         </DCCReference>
         <DCCReference Include="..\server\connection\data_module.pas">
             <Form>dm_connection</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="..\server\objetos\obj_Utils.pas"/>
         <DCCReference Include="..\views\principal\unit_Login.pas">
             <Form>frm_login</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="..\views\principal\unit_Principal.pas">
             <Form>frm_principal</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="..\views\cadastro\unit_cadUsuario.pas">
             <Form>frm_cadUsuario</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="..\views\visualizacao\unit_visuGenerica.pas">
             <Form>frm_visuGenerica</Form>
+        </DCCReference>
+        <DCCReference Include="..\views\cadastro\unit_cadServico.pas">
+            <Form>frm_CadServicos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\views\cadastro\unit_cadCliente.pas">
+            <Form>frm_cadCliente</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">
