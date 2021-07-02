@@ -123,6 +123,14 @@
             <Form>frm_cadCliente</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="..\views\cadastro\unit_cadAgendamento.pas">
+            <Form>frm_cadAgendamento</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\views\visualizacao\unit_visuAgendamento.pas">
+            <Form>frm_visuAgendamento</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

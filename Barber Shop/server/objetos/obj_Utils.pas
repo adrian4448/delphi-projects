@@ -10,7 +10,7 @@ interface
     public
       procedure criarQuery(var query:TFDQuery);
       procedure criarFormulario(const ClasseForm : String);
-      function camposIsNull(formulario:TForm) : Boolean;
+      function  camposIsNull(formulario:TForm) : Boolean;
       procedure limparCampos(formulario:TForm);
   end;
 
@@ -18,7 +18,8 @@ implementation
 
 { TUtils }
 
-uses unit_cadUsuario, unit_Login, unit_Principal, unit_visuGenerica;
+uses unit_cadUsuario, unit_Login, unit_Principal, unit_visuGenerica,
+  unit_cadCliente, unit_cadServico, unit_cadAgendamento, unit_visuAgendamento;
 
 function TUtils.camposIsNull(formulario: TForm) : Boolean;
 var
@@ -71,7 +72,8 @@ end;
 
 initialization
   begin
-    RegisterClasses([Tfrm_cadUsuario, Tfrm_login, Tfrm_principal, Tfrm_visuGenerica]);
+    RegisterClasses([Tfrm_cadUsuario, Tfrm_login, Tfrm_principal, Tfrm_visuGenerica, Tfrm_CadCliente, Tfrm_CadServicos,
+                     Tfrm_cadAgendamento, Tfrm_visuAgendamento]);
   end;
 
 

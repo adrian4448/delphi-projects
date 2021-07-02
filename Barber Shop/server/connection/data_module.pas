@@ -15,6 +15,12 @@ type
     tfd_connection: TFDConnection;
     tfd_transaction: TFDTransaction;
     query_generica: TFDQuery;
+    query_cliente: TFDQuery;
+    query_usuario: TFDQuery;
+    query_servico: TFDQuery;
+    dt_cliente: TDataSource;
+    dt_usuario: TDataSource;
+    dt_servico: TDataSource;
   private
     { Private declarations }
   public

@@ -30,6 +30,14 @@ object frm_principal: Tfrm_principal
     Top = 240
     object Agendamento1: TMenuItem
       Caption = 'Agendamento'
+      object RealizarAgendamento1: TMenuItem
+        Caption = 'Cadastrar Agendamento'
+        OnClick = RealizarAgendamento1Click
+      end
+      object VisualizarAgendamentos1: TMenuItem
+        Caption = 'Visualizar Agendamentos'
+        OnClick = VisualizarAgendamentos1Click
+      end
     end
     object Cliente1: TMenuItem
       Caption = 'Cliente'

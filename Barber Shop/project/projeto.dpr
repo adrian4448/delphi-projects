@@ -13,7 +13,9 @@ uses
   unit_cadUsuario in '..\views\cadastro\unit_cadUsuario.pas' {frm_cadUsuario},
   unit_visuGenerica in '..\views\visualizacao\unit_visuGenerica.pas' {frm_visuGenerica},
   unit_cadServico in '..\views\cadastro\unit_cadServico.pas' {frm_CadServicos},
-  unit_cadCliente in '..\views\cadastro\unit_cadCliente.pas' {frm_cadCliente};
+  unit_cadCliente in '..\views\cadastro\unit_cadCliente.pas' {frm_cadCliente},
+  unit_cadAgendamento in '..\views\cadastro\unit_cadAgendamento.pas' {frm_cadAgendamento},
+  unit_visuAgendamento in '..\views\visualizacao\unit_visuAgendamento.pas' {frm_visuAgendamento};
 
 {$R *.res}
 
@@ -24,5 +26,7 @@ begin
   Application.CreateForm(Tfrm_login, frm_login);
   Application.CreateForm(Tfrm_CadServicos, frm_CadServicos);
   Application.CreateForm(Tfrm_cadCliente, frm_cadCliente);
+  Application.CreateForm(Tfrm_cadAgendamento, frm_cadAgendamento);
+  Application.CreateForm(Tfrm_visuAgendamento, frm_visuAgendamento);
   Application.Run;
 end.

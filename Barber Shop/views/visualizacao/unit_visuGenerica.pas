@@ -82,6 +82,7 @@ end;
 
 procedure Tfrm_visuGenerica.setQuery(sql: String);
 begin
+  data_module.dm_connection.query_generica.SQL.Clear;
   data_module.dm_connection.query_generica.SQL.Add(sql);
 end;
 
