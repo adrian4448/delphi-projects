@@ -24,9 +24,5 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(Tdm_connection, dm_connection);
   Application.CreateForm(Tfrm_login, frm_login);
-  Application.CreateForm(Tfrm_CadServicos, frm_CadServicos);
-  Application.CreateForm(Tfrm_cadCliente, frm_cadCliente);
-  Application.CreateForm(Tfrm_cadAgendamento, frm_cadAgendamento);
-  Application.CreateForm(Tfrm_visuAgendamento, frm_visuAgendamento);
   Application.Run;
 end.

@@ -22,8 +22,8 @@ object frm_visuAgendamento: Tfrm_visuAgendamento
     Align = alClient
     TabOrder = 0
     object Bevel1: TBevel
-      Left = 24
-      Top = 16
+      Left = -24
+      Top = 79
       Width = 857
       Height = 201
     end
@@ -85,6 +85,7 @@ object frm_visuAgendamento: Tfrm_visuAgendamento
       Width = 865
       Height = 393
       DataSource = data_source
+      PopupMenu = PopupMenu1
       TabOrder = 0
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
@@ -178,6 +179,7 @@ object frm_visuAgendamento: Tfrm_visuAgendamento
       NumGlyphs = 2
       ParentFont = False
       TabOrder = 5
+      OnClick = btn_limparClick
     end
   end
   object data_source: TDataSource
@@ -190,6 +192,7 @@ object frm_visuAgendamento: Tfrm_visuAgendamento
     SQL.Strings = (
       'select a.id '#39'Sequencia'#39','
       '       b.nome '#39'Cliente'#39','
+      '       b.email '#39'Email'#39','
       '       c.descricao '#39'Servi'#231'o'#39','
       '       d.nome '#39'Barbeiro'#39','
       '       a.valor '#39'Valor'#39','
@@ -203,5 +206,13 @@ object frm_visuAgendamento: Tfrm_visuAgendamento
       'and   a.barbeiro = d.id')
     Left = 464
     Top = 408
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 104
+    Top = 408
+    object EnviarEmail1: TMenuItem
+      Caption = 'Enviar Email'
+      OnClick = EnviarEmail1Click
+    end
   end
 end

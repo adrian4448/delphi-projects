@@ -19,6 +19,7 @@ type
     txt_telefone: TMaskEdit;
     Label1: TLabel;
     procedure btn_cadastrarClick(Sender: TObject);
+    procedure btn_limparClick(Sender: TObject);
   private
     utils: TUtils;
   public
@@ -52,5 +53,10 @@ begin
     end;
 end;
 
+
+procedure Tfrm_cadCliente.btn_limparClick(Sender: TObject);
+begin
+  utils.limparCampos(self);
+end;
 
 end.

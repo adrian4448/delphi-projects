@@ -22,10 +22,6 @@ object frm_cadUsuario: Tfrm_cadUsuario
     Height = 377
     Align = alClient
     TabOrder = 0
-    ExplicitLeft = 8
-    ExplicitTop = -8
-    ExplicitWidth = 459
-    ExplicitHeight = 438
     object Bevel1: TBevel
       Left = 16
       Top = 56

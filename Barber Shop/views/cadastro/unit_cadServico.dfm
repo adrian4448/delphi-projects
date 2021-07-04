@@ -127,6 +127,7 @@ object frm_CadServicos: Tfrm_CadServicos
       NumGlyphs = 2
       ParentFont = False
       TabOrder = 3
+      OnClick = btn_limparClick
     end
   end
 end

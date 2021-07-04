@@ -21,10 +21,6 @@ object frm_cadAgendamento: Tfrm_cadAgendamento
     Height = 413
     Align = alClient
     TabOrder = 0
-    ExplicitLeft = 224
-    ExplicitTop = 176
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object Bevel1: TBevel
       Left = 16
       Top = 24
@@ -118,6 +114,7 @@ object frm_cadAgendamento: Tfrm_cadAgendamento
       ListField = 'nome'
       ListSource = dm_connection.dt_cliente
       TabOrder = 0
+      OnEnter = lkp_clienteEnter
     end
     object lkp_servico: TDBLookupComboBox
       Left = 32
@@ -206,6 +203,7 @@ object frm_cadAgendamento: Tfrm_cadAgendamento
       NumGlyphs = 2
       ParentFont = False
       TabOrder = 5
+      OnClick = btn_limparClick
     end
     object txt_valor: TEdit
       Left = 32

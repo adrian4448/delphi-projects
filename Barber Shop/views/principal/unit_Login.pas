@@ -40,7 +40,7 @@ begin
   usuario.setSenha(txt_senha.Text);
   if(usuario.login) then
     begin
-      self.Visible := false;
+      self.CloseModal;
       utils.criarFormulario('Tfrm_principal');
       FreeAndNil(frm_principal);
     end;

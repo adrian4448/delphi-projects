@@ -29,7 +29,7 @@ object frm_cadCliente: Tfrm_cadCliente
     object lbl_titulo: TLabel
       Left = 16
       Top = 25
-      Width = 193
+      Width = 182
       Height = 25
       Caption = 'Cadastrar Cliente'
       Font.Charset = DEFAULT_CHARSET
@@ -140,6 +140,7 @@ object frm_cadCliente: Tfrm_cadCliente
       NumGlyphs = 2
       ParentFont = False
       TabOrder = 3
+      OnClick = btn_limparClick
     end
     object txt_telefone: TMaskEdit
       Left = 32

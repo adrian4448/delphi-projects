@@ -2,7 +2,8 @@ unit obj_Agendamento;
 
 interface
 
-uses  FireDAC.Comp.Client,Vcl.Dialogs, System.SysUtils, obj_utils, obj_Cliente, obj_Servico, obj_Usuario;
+uses  FireDAC.Comp.Client,Vcl.Dialogs, System.SysUtils, obj_utils,
+      obj_Cliente, obj_Servico, obj_Usuario, System.DateUtils;
 
 type TAgendamento = class
   private
@@ -33,6 +34,7 @@ type TAgendamento = class
     function getBarbeiro : TUsuario;
 
     procedure insert;
+    function horarioConflitante : Boolean;
 
 end;
 
@@ -73,6 +75,29 @@ end;
 function TAgendamento.getValor: double;
 begin
   result := self.valor;
+end;
+
+function TAgendamento.horarioConflitante: Boolean;
+var
+  query : TFDQuery;
+begin
+  result := false;
+  utils.criarQuery(query);
+  query.SQL.Add('SELECT count(*) FROM agendamento WHERE data between :dataMenosUmaHora and :dataMaisUmaHora and barbeiro = :barbeiro');
+  query.ParamByName('dataMenosUmaHora').AsDateTime := IncMinute(self.data, -60);
+  query.ParamByName('dataMaisUmaHora').AsDateTime := IncMinute(self.data, 60);
+  query.ParamByName('barbeiro').AsInteger := self.barbeiro.getId;
+
+  try
+    query.Open();
+    if(query.Fields[0].AsInteger > 0) then
+      begin
+        result := true;
+      end;
+  except
+    on e:Exception do
+      showMessage(e.ToString);
+  end;
 end;
 
 procedure TAgendamento.insert;
